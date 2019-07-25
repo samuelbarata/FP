@@ -1,0 +1,67 @@
+#____________________________________DEBUG____________________________________
+
+#_____other________
+vs = "Projeto/2/teste.txt"
+wing = "teste2.txt"
+hello_quantum(wing)
+
+#____CELULAS___________
+c0 = cria_celula(0)
+c1 = cria_celula(1)
+cx = cria_celula(-1)
+celula_para_str(c1)
+celula_para_str(c0)
+celula_para_str(cx)
+celulas_iguais(c1, c0)
+c2 = cria_celula(1)
+celulas_iguais(c1, c2)
+eh_celula(c0)
+eh_celula(-2)
+eh_celula(2)
+celula_para_str(inverte_estado(c0))
+celula_para_str(inverte_estado(c1))
+celula_para_str(inverte_estado(cx))
+#____COOOR_______
+cd = cria_coordenada(0, 2)
+c = cria_coordenada(0, 'a')
+coordenada_linha(cd)
+coordenada_coluna(cd)
+eh_coordenada(cd)
+eh_coordenada(('a',0))
+coordenada_para_str(cd)
+coordenadas_iguais(cd, cria_coordenada(0,2))
+coordenadas_iguais(cd, cria_coordenada(2,0))
+#____TAB___
+t0 = tabuleiro_inicial()
+print(tabuleiro_para_str(t0))
+t2 = str_para_tabuleiro('((-1, -1, -1), (0, 1, -1), (1, -1))')
+print(tabuleiro_para_str(t2))
+celula_para_str(tabuleiro_celula(t0, cria_coordenada(0, 0)))
+celula_para_str(tabuleiro_celula(t0, cria_coordenada(1, 1)))
+eh_tabuleiro(t0)
+t1 = tabuleiro_inverte_estado(t0, cria_coordenada(1, 1))
+print(tabuleiro_para_str(t1))
+tabuleiros_iguais(t0, tabuleiro_inicial())
+tabuleiros_iguais(t0, t1)
+#__X___
+t1 = porta_x(tabuleiro_inicial(), 'E')
+print(tabuleiro_para_str(t1))
+t2 = porta_x(t1,'D')
+print(tabuleiro_para_str(t2))
+p = porta_x(t2, 'X')
+#____Z_______
+t3 = str_para_tabuleiro('((0, -1, 0), (-1, -1, -1), (-1, 0))')
+print(tabuleiro_para_str(t3))
+t4 = porta_z(t3, 'E')
+print(tabuleiro_para_str(t4))
+t5 = porta_z(t4, 'D')
+print(tabuleiro_para_str(t5))
+#_______H________
+t1 = tabuleiro_inicial()
+print(tabuleiro_para_str(t1))
+t2 = porta_h(t1, 'D')
+print(tabuleiro_para_str(t2))
+t3 = porta_h(t2, 'E')
+print(tabuleiro_para_str(t3))
+t = porta_h(t2, 'X')
+#_____________________________________________________________________________
